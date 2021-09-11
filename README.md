@@ -1,6 +1,8 @@
 # 이재현 201840223
 
 # 09월 08일 
+리액트 기초개념
+
 npm install 
 npx -g
 
@@ -8,6 +10,18 @@ npx create-react-app movie_app_2021-5<br>
 
 Edit.package.json<br>
 test,eject삭제
+
+npm start로 앱을 실행
+
+App.js <br>
+index.js<br>
+해석하고 <br>
+index,html 에 끼워 넣는 형식 <br>
+<hr>
+function으로 정의 내린 것을 (컴포넌트)라고 칭한다<br>
+컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 이용<br>
+JSX의 문법은 JS와 HTML문법의 조합한 것<br>
+※ 첫 글자 사용시 대문자 사용<br>
 
 
 # 09월 01일
