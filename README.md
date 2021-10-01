@@ -5,6 +5,77 @@ function으로 정의 내린 것을 (컴포넌트)라고 칭한다<br>
 컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 이용<br>
 JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 
+# 09월 29일
+ git --version => 버전확인후 2.28.0이상 버전 설치 권장<br>
+ git config --global init.defaultBranch main<br>
+ git branch -m master main<br>
+<br>
+git clone http://github~~ <br>
+cd {repo-name} -[로컬 프로젝트로 폴더로 들어감] <br>
+npm install - [이때 node-module 설치] <br>
+npm start <br>
+
+npm install prop-types 설치<br>
+import PropTypes (<-이름 변경가능) from 'prop-types'; 추가 App.js파일 위에 <br>
+
+prop-types 설치 -> 등록이 되어있으면 설치가 정상적으로 된것. <br>
+
+isRequired는 필요하다는 의미 - rating에는 string 자료형이 반드시 <b><u>필요</u></b>! <br>
+rating:PropTypes.<b><u>string.</u></b>isRequired -> <b><u>number</u></b> 교체 <br>
+
+
+* props - 정적인 데이터만 가능 <br>
+* state - 동적인 데이터를 다룰때 사용 <br>
+└─> class형 컴포넌트에서 사용 <br>
+
+<mark>JSX</mark>를 반환해야 하지만 class형에서는 바로 return을 사용할 수 없다.<br>
+render() 함수 내에서 return문을 사용 <br>
+함수형 컴포넌트는 return문이 <mark>JSX</mark>를 반환하지만 <br>
+클래스형 컴ㅁ포넌트는 render()함수가<mark>JSX</mark>를반환 <br>
+
+#### state 정의
+class 안에 state = {} 작성후 state를 정의<br>
+* state는 객체형태의 데이터 <br>
+* state사용시  소문자로 사용한다 <br>
+* state = count키와 키값을 0으로 추가 <br>
+<ul>
+state={ <br>
+    count:0 <br>
+} <br>
+</ul>
+<hr>
+<ul>
+add = () => { <br>
+    console.log('add'); <br>
+}<br>
+minus = () => { <br>
+    console.log('minus'); <br>
+}<br>
+<.button onClick =this.add}>ADD</button> <br>
+<.button onClick =this.minus}>Minus</button><br>
+this.state.count = 1 <br>
+this.state.count = -1 <br>
+└─> ※ <b>경고</b> 발생 state는 직접 변경 XX <br>
+
+### 변경 >> this.setState({count:1}) OR<br>  this.setState({count:-1}) 
+<b> setState()</b> 함수를 사용해서 state값을 변경 <br>
+-> 경고는 없어지지만 단순히 버튼실행시 1/-1로만 변할뿐 지속적인 증가는 XX
+- 증감키 : this.setState({count:this.state.count + 1 / -1}) <br>
+- └─ 성능에 문제가 생길수있다
+- setState()함수의 인자로 전달시 성능 문제 X
+this.setState(current=>({count:this.state.count +1/-1}))
+</ul>
+
+constructor() : 컴포넌트 생성시 state 값을 초기화 or 메서드를 바인딩 할 때 사용 <br>
+
+자바스크립트에서<mark>super</mark>는 부모클래스 생성자의 참조한다는 의미<br>
+super를 호출하기 전에는 this를 사용할수없다 <br>
+└─super를 먼저 호출후 this를 사용이 가능하다 <br>
+
+
+
+
+
 # 09월 17일 
 컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 사용해서 만든다. <br>
 
