@@ -64,7 +64,7 @@ rating:PropTypes.<b><u>string.</u></b>isRequired -> <b><u>number</u></b> 교체 
 <mark>JSX</mark>를 반환해야 하지만 class형에서는 바로 return을 사용할 수 없다.<br>
 render() 함수 내에서 return문을 사용 <br>
 함수형 컴포넌트는 return문이 <mark>JSX</mark>를 반환하지만 <br>
-클래스형 컴ㅁ포넌트는 render()함수가<mark>JSX</mark>를반환 <br>
+클래스형 컴포넌트는 render()함수가<mark>JSX</mark>를반환 <br>
 
 #### state 정의
 class 안에 state = {} 작성후 state를 정의<br>
