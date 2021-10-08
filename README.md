@@ -26,15 +26,20 @@ yts-proxy.now.sh에 /list_movies.json을 붙이면 사용가능 <br>
 yts-proxy.now.sh에 endpoint를 붙이면 가능
 
 ## [ EX ]
-yts-proxy.now.sh/list_movies.json?movie_id=10 이하고 접속하면 아이디가 10인 영화의 자세
+● yts-proxy.now.sh/list_movies.json?movie_id=10 이하고 접속하면 아이디가 10인 영화의 자세
 한 정보를 볼 수 있다 <br>
 
-API를 사용하려면 axios를 import한 다음, componentDidMount()함수에서 axios로 API를 호출 <br>
+● API를 사용하려면 axios를 import한 다음, componentDidMount()함수에서 axios로 API를 호출 <br>
 
-getMovies()함수를 만들고, 이 함수 안에서 axios.get()이 실행<br>
+● getMovies()함수를 만들고, 이 함수 안에서 axios.get()이 실행<br>
 
-axios.get()의 return값은 movies에 저장<br>
-componentDidMount()함수가 실행되면 this.getMovie()가 실행<br>
+● axios.get()의 return값은 movies에 저장<br>
+● componentDidMount()함수가 실행되면 this.getMovie()가 실행<br>
+
+● 시간이 필요하다는 것을 알리기 위해서는 async, await 키워드가 필요<br>
+
+● 자바스크립트에게 시간이 필요하다는 것을 알리려면 async를 ()앞에 붙이고,<br>
+● 실제 시간이 필요한 대상인 axios.get()함수 에는 await을 붙인다
 
 #### 이 데이터 구조는 음식 앱을 만들 때 사용했던 데이터 구조와 동일 !!
 
