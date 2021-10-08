@@ -5,6 +5,39 @@ function으로 정의 내린 것을 (컴포넌트)라고 칭한다<br>
 컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 이용<br>
 JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 
+# 10월 06일
+### 영화 앱 만들기
+영화 데이터를 로딩시 fetch()함수를 이용한다 <br>
+첫번째 인자로 URL, 두번째 인자로 옵션 객체를 받고, Promise 타입의 객체를 반환<br>
+하지만 <b>※ axios ※</b> 를사용 <br>
+
+>터미널에서 "npm install axios" 설치
+
+status : 응답상태 메시지 <br>
+data : 영화 데이터<br>
+movie_count : API가 보내준 영화 데이터 개수<br>
+limit : 보내준 데이터의 개수<br>
+movies키의 서브키로 id,url,lmdb_code,title 등 제공한다<br>
+> ※ YTS에서는 영화 토렌트 파일을 업로드 하기에 불법이라서 주소가 매번 바뀐다.
+
+> ※ YTS의 endpoint/list_movies.json사용시
+yts-proxy.now.sh에 /list_movies.json을 붙이면 사용가능 <br>
+● YTS의 다른 endpoint와 함께 사용시 <br>
+yts-proxy.now.sh에 endpoint를 붙이면 가능
+
+## [ EX ]
+yts-proxy.now.sh/list_movies.json?movie_id=10 이하고 접속하면 아이디가 10인 영화의 자세
+한 정보를 볼 수 있다 <br>
+
+API를 사용하려면 axios를 import한 다음, componentDidMount()함수에서 axios로 API를 호출 <br>
+
+getMovies()함수를 만들고, 이 함수 안에서 axios.get()이 실행<br>
+
+axios.get()의 return값은 movies에 저장<br>
+componentDidMount()함수가 실행되면 this.getMovie()가 실행<br>
+
+#### 이 데이터 구조는 음식 앱을 만들 때 사용했던 데이터 구조와 동일 !!
+
 # 09월 29일
  git --version => 버전확인후 2.28.0이상 버전 설치 권장<br>
  git config --global init.defaultBranch main<br>
