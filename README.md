@@ -40,7 +40,8 @@ year={movie.year} <br>
 title={movie.title} <br>
 summary={movie.summary} <br>
 poster={movie.medium_cover_image} <br>
-/>
+/> <br>
+└ key props는 유일해야한다 그러므로 API에서 넘겨주는 id값을 사용해야한다
 
 # 10월 06일
 ### 영화 앱 만들기
