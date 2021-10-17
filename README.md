@@ -5,6 +5,28 @@ function으로 정의 내린 것을 (컴포넌트)라고 칭한다<br>
 컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 이용<br>
 JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 
+# 10월 13일
+import Movie from './Movie' <br>
+key props는 유일해야 한다 API에서 넘겨주는 id값을 사용
+console.log()는 사용 X
+
+### Movie 컴포넌트 수정하기
+console을 확인해 보면 두가지 warnin을 확인가능하다<br>
+JSX에 사용한 속성 중 class속성이 className으로 사용되어야 한다 <br>
+genres props가 required로 되어 있는데 
+Movie 컴포넌트에 undefined로 넘어감 <br>
+
+Slice함수를 이용하여 구현<br>
+"hereisstring".slice(0,10) <br>
+└012 ... 11┘       시작,끝 <br>
+hereisstri <br>
+└012 ... 9┘ 
+<br>
+genres.map((genre,index)=> {...}) <br>
+            배열 원소 / 1,2,3, ... 번째
+
+
+
 # 10월 06일
 ### 영화 앱 만들기
 영화 데이터를 로딩시 fetch()함수를 이용한다 <br>
