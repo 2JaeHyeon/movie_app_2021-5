@@ -15,7 +15,7 @@ console을 확인해 보면 두가지 warnin을 확인가능하다<br>
 JSX에 사용한 속성 중 class속성이 className으로 사용되어야 한다 <br>
 genres props가 required로 되어 있는데 
 Movie 컴포넌트에 undefined로 넘어감 <br>
-
+<hr>
 Slice함수를 이용하여 구현<br>
 "hereisstring".slice(0,10) <br>
 └012 ... 11┘       시작,끝 <br>
@@ -25,7 +25,22 @@ hereisstri <br>
 genres.map((genre,index)=> {...}) <br>
             배열 원소 / 1,2,3, ... 번째
 
+## ★ Code 해석 ★
+function Movie ({id,title,year,summary,poster}){<br>
+    retrun<.h4>{title}<.h4> <br>
+}<br>
+└ 음식 앱을 만들 때 컴포넌트를 map() 함수로 출력했던 것과 같이 코딩
 
+import Movie from './Movie' <br>
+└ movies.map()에 전달한 함수가 <Movie/>를 반환하도록 지정 
+
+<Movie <br>
+id={movie.id} <br>
+year={movie.year} <br>
+title={movie.title} <br>
+summary={movie.summary} <br>
+poster={movie.medium_cover_image} <br>
+/>
 
 # 10월 06일
 ### 영화 앱 만들기
