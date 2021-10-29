@@ -5,6 +5,35 @@ function으로 정의 내린 것을 (컴포넌트)라고 칭한다<br>
 컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 이용<br>
 JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 
+# 10월 27일
+
+npm cache clean --force
+npm rebuild
+rm -rf node_module
+
+### react-router-dom 설치
+터미널에서 npm install react-router-dom 입력 <br>
+> components폴더에 Movie 컴포넌트 이동 <br>
+> routes폴더에 Home.js & About.js 생성 <br>
+> Home.js수정 <br>
+> Home.css 생성 <br>
+> App.js 수정 <br>
+
+path props 를 "/"로 입력한 이유 <br>
+localhost:3000접속시 기본으로 보여줄 컴포넌트를
+Home으로 하기위해서<br>
+
+localhost:3000접속시 주소 뒤에 자동으로 /#/ 붙으면서 영화 앱 화면 표시 <br>
+
+리다이렉트 기능 사용 -> route props의 history키를 활용 해야함 <br>
+
+history키에는 push, go, goBack, goForward와 같은 키가 있으며, 그 키에는 URL을 변경해 주는
+함수<br>
+
+이 함수들을 이용해서 리다이렉트 기능을 구현<br>
+
+
+
 # 10월 13일
 import Movie from './Movie' <br>
 key props는 유일해야 한다 API에서 넘겨주는 id값을 사용
