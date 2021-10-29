@@ -7,9 +7,11 @@ JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 
 # 10월 27일
 
-npm cache clean --force
-npm rebuild
-rm -rf node_module
+###### 해결 소스 문제 방안 
+npm cache clean --force <br>
+npm rebuild <br>
+rm -rf node_module <br>
+npm install <br>
 
 ### react-router-dom 설치
 터미널에서 npm install react-router-dom 입력 <br>
@@ -18,6 +20,11 @@ rm -rf node_module
 > Home.js수정 <br>
 > Home.css 생성 <br>
 > App.js 수정 <br>
+
+localhost:3000/#에 path props로 전달한 값
+/about을 붙인후 접속하면<br> 
+URL: localhost:3000/#/about
+<br>
 
 path props 를 "/"로 입력한 이유 <br>
 localhost:3000접속시 기본으로 보여줄 컴포넌트를
@@ -32,7 +39,9 @@ history키에는 push, go, goBack, goForward와 같은 키가 있으며, 그 키
 
 이 함수들을 이용해서 리다이렉트 기능을 구현<br>
 
-
+#### App.js 해결방안 
+Route 컴포넌트에 exact props를 추가하면 해결 <br>
+exact props는 Route 컴포넌트가 path props와 정확하게 일치하는 URL에만 반응하도록 한다
 
 # 10월 13일
 import Movie from './Movie' <br>
