@@ -5,8 +5,41 @@ function으로 정의 내린 것을 (컴포넌트)라고 칭한다<br>
 컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 이용<br>
 JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 
-# 10월 27일
+# 11월 03일
+Markdown Tip <br>
+npm cache clean --force <br>
+npm rebuild <br>
+rm -rf node modules <br>
+npm install <br>
 
+package.json은 패키지 의존성 관리 파일
+협업시 팀원딜 각자의 컴퓨터에 같은 패키지들을 설치해서 동일한 개발환경을 구성해야함
+그때 사용하는것이 package.json
+
+팀원들과의 버전이 안맞을 때 오류발생 
+1. npm 버전확인 - npm -version 
+2. node modoules 폴더 전체삭제
+3. npm cache 삭제
+4. node modules 재설치
+5. npm install <br>
+
+package.json은 version range사용
+express:~4.16.1
+<br>
+package-lock.json은 
+package.json~~~~
+<br>
+lock파일이 있으면 install명령은 json을 사용하지않고 실행
+<br>
+rm명령어가 실행되지않을때 shell을 관리자 권한으로 실행
+<br>
+
+
+
+
+<hr>
+
+# 10월 27일
 ###### 해결 소스 문제 방안 
 npm cache clean --force <br>
 npm rebuild <br>
