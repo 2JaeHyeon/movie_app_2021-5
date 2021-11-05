@@ -1,16 +1,12 @@
-import React from 'react';
-import "./About.css";
+import './About.css'
 
-function About() {
-  return (
-
-    <HashRouter>
-      <Navigation />
-      <Route path="/" exact={true} component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/movie/:id" component={Detail} />
-    </HashRouter>
-  );
+function About(props) {
+    console.log(props);
+    return(
+        <div className='about-container'>   
+        <span><h1>Hello!!</h1></span>
+        </div>
+    )
 }
 
-export default About;
+export default About
