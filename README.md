@@ -4,13 +4,21 @@
 function으로 정의 내린 것을 (컴포넌트)라고 칭한다<br>
 컴포넌트는 자바스크립트와 HTML을 조합한 JSX라는 문법을 이용<br>
 JSX의 문법은 JS와 HTML문법의 조합한 것<br>
+npm install axios 설치 <br>
+npm install <br>
 
 # 11월 03일
+
 Markdown Tip <br>
 npm cache clean --force <br>
 npm rebuild <br>
 rm -rf node modules <br>
 npm install <br>
+
+rm 명령이 실행되지않을때 shell을 관리자 권한으로 실행후 다시시도
+안될경우 탐색기에서 삭제
+cache clean / rebuild를 통해 해결이 될때도 있음
+
 
 package.json은 패키지 의존성 관리 파일
 협업시 팀원딜 각자의 컴퓨터에 같은 패키지들을 설치해서 동일한 개발환경을 구성해야함
@@ -31,8 +39,9 @@ package.json~~~~
 <br>
 lock파일이 있으면 install명령은 json을 사용하지않고 실행
 <br>
-rm명령어가 실행되지않을때 shell을 관리자 권한으로 실행
-<br>
+
+lock은 package.json이 변경될 때마다 업데이트가 진행된다
+
 
 
 
