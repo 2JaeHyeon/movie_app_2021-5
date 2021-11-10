@@ -39,6 +39,17 @@ github는 github값을 넣어주고 업로드하면 실행
 <b>npm run deploy</b>실행후 결과 창 확인
 npm start로 실행해야함
 
+<hr>
+React 특징 <br>
+상호작용이 많은 UI개발에 적합 <br> 
+컴포넌트 로직은 JavaScript로 작성 <br>
+캡슐화된 컴포넌트로 개발되어 재사용이 용이 <br>
+DOM과는 별개로 상태를 관리 가능 <br>
+기술 스택의 나머지 부분에는 관여 X <br>
+기존 코드와 별개로 개발 가능 <br> 
+React Native를 이용하면 모바일 앱도 만들 수 있다. <br>
+
+
 # 11월 03일
 
 Markdown Tip <br>
