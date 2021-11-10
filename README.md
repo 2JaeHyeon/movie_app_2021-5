@@ -51,7 +51,15 @@ React Native를 이용하면 모바일 앱도 만들 수 있다. <br>
 CDN:ContentDeliveryNetwork <b>or</b> <br> Content Distribution Network<br>
 CORS:특정 헤더를 통해서 브라우저에게 원 출처(origin)에서 실행되고 있는 웹 애필리케이션이 다른 출처 <br>(cross-origin)에 원하는 리소스에 접근할 수 있는 권한이 있는지 없는지를 알려주는 메커니즘<br>
 Babel:ECMAScript 2015+ 코드를 이전 JavaScript엔진에서 실행할 수 있는 이전 버전과 호환되는 JavaScript버전으로 변환하는 데 주로 사용되는 무료 오픈 소스 JavaScript 트랜스 컴파일러 <br>
+
+### 간단한 컴포넌트 
+React component에서 render()메소드 
 <hr>
+
+html에서 cdn에서 <.script>태그 사용시 <br> 
+type = "text/babel" 추가 <br> 
+
+
 
 # 11월 03일
 
