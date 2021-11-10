@@ -19,25 +19,25 @@ homepage키와 키값을 browserslist키 아래에 추가
 . 깃허브에서 제공하는 github pages서비스로 배포 <br>
 . npm install gh-pages <br>
 . 마지막으로 깃허브의 저장소 이름을 <b>재확인</b> <br>
-<b> git remote -v 버전 확인 </b>
+<b> git remote -v 버전 확인 </b> <br>
 <b> npm run deploy </b> 입력시 배포 실행 
 
-배포시
-npm run build
-실행을 하면 build폴더 생성 > 필요한 파일 생성
-이 파일을 웹서버에 업로드
-index.html을 살펴보면 
-F12 > 네이트워크 + F5(새로고침)
+#### 배포
+npm run build<br>
+실행을 하면 build폴더 생성 > 필요한 파일 생성<br>
+이 파일을 웹서버에 업로드 <br>
+index.html을 살펴보면 <br>
+F12 > 네이트워크 + F5(새로고침)<br>
 
 ## 파일경로 수정시 중요사항
 package.json <br>
 "homepage": "file:///C:/WebContentPro/movie_app_2021-5/build"
 <br>
-경로 설정 값을 주고 업로드해야한다
+경로 설정 값을 주고 업로드해야한다 <br>
 github는 github값을 넣어주고 업로드하면 실행
-경로 설정 해준뒤에 
-<b>npm run deploy</b>실행후 결과 창 확인
-npm start로 실행해야함
+경로 설정 해준뒤에 <br> 
+<b>npm run deploy</b>실행후 결과 창 확인 <br>
+npm start로 실행해야함<br>
 
 <hr>
 React 특징 <br>
@@ -48,7 +48,7 @@ DOM과는 별개로 상태를 관리 가능 <br>
 기술 스택의 나머지 부분에는 관여 X <br>
 기존 코드와 별개로 개발 가능 <br> 
 React Native를 이용하면 모바일 앱도 만들 수 있다. <br>
-
+<hr>
 
 # 11월 03일
 
