@@ -7,6 +7,38 @@ JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 npm install axios 설치 <br>
 npm install <br>
 
+# 11월 10일 
+깃허브 배포 <br>
+배포전 GitHub저장소의 branch를 확인<br>
+깃허브 주소를 영화 앱이 인식할 수 있도록 package.json파일을 수정<br>
+(본인의 계정을 사용하면된다) <br>
+homepage키와 키값을 browserslist키 아래에 추가
+<br>
+
+. push명령을 통해 최종 키 입력 <br>
+. 깃허브에서 제공하는 github pages서비스로 배포 <br>
+. npm install gh-pages <br>
+. 마지막으로 깃허브의 저장소 이름을 <b>재확인</b> <br>
+<b> git remote -v 버전 확인 </b>
+<b> npm run deploy </b> 입력시 배포 실행 
+
+배포시
+npm run build
+실행을 하면 build폴더 생성 > 필요한 파일 생성
+이 파일을 웹서버에 업로드
+index.html을 살펴보면 
+F12 > 네이트워크 + F5(새로고침)
+
+## 파일경로 수정시 중요사항
+package.json <br>
+"homepage": "file:///C:/WebContentPro/movie_app_2021-5/build"
+<br>
+경로 설정 값을 주고 업로드해야한다
+github는 github값을 넣어주고 업로드하면 실행
+경로 설정 해준뒤에 
+<b>npm run deploy</b>실행후 결과 창 확인
+npm start로 실행해야함
+
 # 11월 03일
 
 Markdown Tip <br>
