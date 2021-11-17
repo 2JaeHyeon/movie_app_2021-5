@@ -7,6 +7,54 @@ JSX의 문법은 JS와 HTML문법의 조합한 것<br>
 npm install axios 설치 <br>
 npm install <br>
 
+# 11월 17일
+
+### TodoList
+TodoApp과 TodoList 두개의 컴포넌트로 구성 <br>
+handleChange는 모든 키보드 입력마다 React의 state를 갱신해서 보여준다 <br>
+element에서 확인 <br>
+시간순으로 작동하는 순서 <br>
+유저입력 > habdleChange > react 의 state갱신 form element가 react state를 참조한다 <br>
+유저 입력을 강제로 대문자로 변경시에도 사용 <br>
+handleChange(event){
+    this.setState({value:event.target.value.toUpperCase()})
+}
+
+render()에서 초기 렌더링 실행<br>
+onChange()를 통해 input에 입력이됨<br>
+그러므로 state 상태로 변경<br>
+
+입력된 값은 state의 "text:"에 <b>임시로 저장</b><br>
+> className처럼 html과 구분하기 위해 jsx에서 사용하는 키워드<br>
+
+버튼 클릭시 버튼의 숫자 증가 <br>
+리스트는 배열로 저장이된다 <br>
+item.length를 통해 list수 확인<br>
+
+input area에 이벤트 발생시 <br>
+handleChange(e)가 동작하면서 State의 text값
+변경 <br>
+크롬 DevTool에서 실시간으로 state가 변화하는것을 확인
+<br>
+handleChange 메소드중에서 prevent
+<br>
+timer.html <br>
+<br>
+ - state = 0<br>
+ - state.seconds +1 > state에 1더하기<br>
+ - this.tick(), 1000  >> 1초(1000) 마다 한번씩 tick 실행<br>
+
+#### keyprops
+key는 props의 안정적으로 사용할 수 있도록 고유성을 부여<br>
+유일한 값이라면 그 값이 무엇이든 상관x<br>
+react가 어떤 props를 변경/추가/삭제시 식별하는것을 도움
+<br>
+반드시 date를 사용하지않고 배열의 index값 사용이 가능 <br> 
+
+#### 외부 플러그인을 사용하는 컴포넌트
+외부 컴포넌트를 사용한 markdown에디터 <br>
+remarkable.js로 검색해야 찾을수있음 <br>
+
 # 11월 10일 
 깃허브 배포 <br>
 배포전 GitHub저장소의 branch를 확인<br>
