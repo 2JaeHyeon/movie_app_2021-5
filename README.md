@@ -19,6 +19,78 @@ react에는 함수 컴포넌트와 클래스 컴포넌트가 있다 <br>
 컴포넌트 합성 : 컴포넌트는 출력에 다른 컴포넌트를 참조할 수 있다.<br>
 <hr>
 
+# 12월 01일
+함수형 / 클래스형 2개가 있다.  
+
+다섯 단계로 Clock과 같은 함수 컴포넌트를 클래스로 변환할 수 있습니다.  
+
+React.Component를 확장하는 동일한 이름의 ES6 class를 생성합니다.  
+render()라고 불리는 빈 메서드를 추가합니다.  
+함수의 내용을 render() 메서드 안으로 옮깁니다.    
+render() 내용 안에 있는 props를 this.props로 변경합니다.  
+남아있는 빈 함수 선언을 삭제합니다.  
+```
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+### 클래스에 로컬 State 추가하기
+render() 메서드 안에 있는 this.props.date를 this.state.date로 변경합니다.  
+```
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+초기 this.state를 지정하는 class constructor를 추가  
+```
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+여기서 어떻게 props를 기본 constructor에 전달하는지 유의  
+```
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+```
+클래스 컴포넌트는 항상 props로 기본 constructor를 호출 
+
+<.Clock /> 요소에서 date prop을 삭제  
+```
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
+
+```
+
 # 11월 24일
 
 state를 이용하여 remarkable에 변환할 마크다운 문장을 제출 <br>
