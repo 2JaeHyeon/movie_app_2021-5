@@ -49,13 +49,48 @@ class Clock extends React.Component {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        ■<h2>It is {this.state.date.toLocaleTimeString()}.</h2>■
       </div>
     );
   }
 }
 ```
 초기 this.state를 지정하는 class constructor를 추가  
+```
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+   ■ this.state = {date: new Date()}; ■
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+여기서 어떻게 props를 기본 constructor에 전달하는지 유의  
+```
+  constructor(props) {
+   ■ super(props); ■
+    this.state = {date: new Date()};
+  }
+```
+클래스 컴포넌트는 항상 props로 기본 constructor를 호출 
+
+<.Clock /> 요소에서 date prop을 삭제  
+```
+ReactDOM.render(
+ ■ <Clock />, ■
+  document.getElementById('root')
+);
+
+```
+## 결과 
 ```
 class Clock extends React.Component {
   constructor(props) {
@@ -72,24 +107,47 @@ class Clock extends React.Component {
     );
   }
 }
-```
-여기서 어떻게 props를 기본 constructor에 전달하는지 유의  
-```
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date()};
-  }
-```
-클래스 컴포넌트는 항상 props로 기본 constructor를 호출 
 
-<.Clock /> 요소에서 date prop을 삭제  
-```
 ReactDOM.render(
   <Clock />,
   document.getElementById('root')
 );
-
 ```
+## 생명주기 메서드를 클래스에 추가
+
+많은 컴포넌트가 있는 애플리케이션에서   컴포넌트가 삭제될 때  해당 컴포넌트가 사용 중이던 리소스를 확보하는 것이 중요  
+
+Clock이 처음 DOM에 렌더링 될 때마다 타이머를 설정  이것은 React에서 “마운팅”  
+
+Clock에 의해 생성된 DOM이 삭제될 때마다 타이머를 해제  이것은 React에서 “언마운팅”  
+
+컴포넌트 클래스에서 특별한 메서드를 선언하여 컴포넌트가 마운트되거나 언마운트 될 때 일부 코드를 작동
+```
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+■
+■  componentDidMount() {
+■  }
+■
+■  componentWillUnmount() {
+■  } 
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+이러한 메서드들은 “생명주기 메서드”라고 한다.  
+
+
 
 # 11월 24일
 
