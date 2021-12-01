@@ -55,7 +55,8 @@ class Clock extends React.Component {
   }
 }
 ```
-초기 this.state를 지정하는 class constructor를 추가  
+초기 this.state를 지정하는 class constructor를 추가
+초기화 시켜준다.    
 ```
 class Clock extends React.Component {
   constructor(props) {
@@ -130,6 +131,7 @@ class Clock extends React.Component {
   }
 ■
 ■  componentDidMount() {
+    갱신해주는 역할  
 ■  }
 ■
 ■  componentWillUnmount() {
@@ -146,6 +148,28 @@ class Clock extends React.Component {
 }
 ```
 이러한 메서드들은 **“생명주기 메서드”**라고 한다.  
+
+## setState()에 대해서 알아야 할 세 가지
+> 직접 State를 수정 X  
+this.state를 지정할 수 있는 유일한 공간은 바로 constructor
+>
+
+```
+this.state.comment = 'Hello';  X
+this. ■set■ State({comment: 'Hello'}); O
+```
+>State 업데이트는 비동기적일수 있다.  
+this.props와 this.state가 비동기적으로 업데이트될 수 있기 때문  
+>
+```
+this.setState({
+  counter: this.state.counter + this.props.increment, 안쪽 this X
+});
+ -> ◆ 변경 ◆ 
+this.setState((state, props) => ({
+  counter: state.counter + props.increment
+})); 
+```
 
 
 
