@@ -147,7 +147,7 @@ class Clock extends React.Component {
   }
 }
 ```
-이러한 메서드들은 **“생명주기 메서드”**라고 한다.  
+이러한 메서드들은 **생명주기 메서드**라고 한다.  
 
 ## setState()에 대해서 알아야 할 세 가지
 > 직접 State를 수정 X  
@@ -170,6 +170,30 @@ this.setState((state, props) => ({
   counter: state.counter + props.increment
 })); 
 ```
+>State 업데이트는 병합된다
+setState()를 호출할 때  
+React는 제공한 객체를 현재 state로 병합
+>
+
+## 데이터는 아래로 흐른다.
+부모 컴포넌트나 자식 컴포넌트 모두 특정 컴포넌트가 유상태인지 또는 무상태인지 알 수 없고,  그들이 함수나 클래스로 정의되었는지에 대해서 관심을 가질 필요가 없다
+
+## 이벤트 처리 
+HTML
+```
+<button onclick="activateLasers()">
+  Activate Lasers
+</button>
+```
+React
+```
+<button onClick={activateLasers}>
+  Activate Lasers
+</button>
+```
+차이점으로, React에서는 false를 반환해도 기본 동작을 방지할 수 없습니다.  
+
+반드시 preventDefault를 명시적으로 호출
 
 
 
