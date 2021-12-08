@@ -110,7 +110,8 @@ class EssayForm extends React.Component {
 ```
 
 ### select 태그
-HTML에서 <select>는 드롭 다운 목록을 만듭니다  
+HTML에서 <'select>는 드롭 다운 목록을 만듭니다
+  
 ```
 <select>
   <option value="grapefruit">Grapefruit</option>
