@@ -19,6 +19,39 @@ react에는 함수 컴포넌트와 클래스 컴포넌트가 있다 <br>
 컴포넌트 합성 : 컴포넌트는 출력에 다른 컴포넌트를 참조할 수 있다.<br>
 <hr>
 
+# 12월 08일
+### 여러개의 컴포넌트 렌더링 하기
+엘리먼트 모음을 만들고 중괄호 {}를 이용하여 JSX에 포함 시킬 수 있다  
+아래의 JavaScript map() 함수를 사용하여 numbers 배열을 반복 실행합니다.  각 항목에 대해 <li> 엘리먼트를 반환하고 엘리먼트 배열의 결과를 listItems에 저장
+```
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =>
+  <li>{number}</li>
+);
+```
+> listItems 배열을 <ul>엘리먼트 안에 포함하고 DOM에 렌더링
+```
+ReactDOM.render(
+  <ul>{listItems}</ul>,
+  document.getElementById('root')
+);
+```
+## Key
+Key는 React가 어떤 항목을 변경, 추가 또는 삭제할지 식별하는 것을 도운다  
+key는 엘리먼트에 안정적인 고유성을 부여하기 위해 배열 내부의 엘리먼트에 지정  
+Key를 선택하는 가장 <b>좋은 방법</b>은 리스트의 다른 항목들 사이에서 해당 항목을 고유하게 식별할 수 있는 문자열을 사용  
+대부분의 경우 데이터의 ID를 key로 사용  
+```
+const todoItems = todos.map((todo) =>
+  <li key={todo.id}>
+    {todo.text}
+  </li>
+);
+```
+
+
+
+
 # 12월 01일
 ** 함수형 / 클래스형 2개가 있다.**  
 
